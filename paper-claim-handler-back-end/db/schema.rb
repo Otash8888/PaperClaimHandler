@@ -39,14 +39,22 @@ ActiveRecord::Schema.define(version: 2018_10_29_215223) do
   end
 
   create_table "recipients", force: :cascade do |t|
-    t.string "name"
-    t.integer "dob"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "mi"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip_code"
+    t.string "patient_dob"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", null: false
